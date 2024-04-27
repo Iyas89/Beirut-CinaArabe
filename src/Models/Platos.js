@@ -1,13 +1,13 @@
 const {DataTypes} = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('Menu', {
+    sequelize.define('Platos', {
         id: {
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true
         },
-        name: {
+        plato: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -19,10 +19,9 @@ module.exports = (sequelize) => {
             type: DataTypes.FLOAT,
             allowNull: false
         },
-        image: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
+        // image: {
+        //     type: DataTypes.STRING,
+        // },
 
     }, {timestamps: false});
 }

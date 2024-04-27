@@ -1,18 +1,11 @@
+
 const { Router } = require("express");
-
-//Post Handlers
-const {createMenuHandler} = require("../Handlers/createManuHandler")
-
-
-
+const { createPlatosHandler } = require("../Handlers/createPlatosHandler");
+ 
 
 const MenuRouter = Router();
 
+// Rutas para crear un plato y una categoría
+MenuRouter.post("/", createPlatosHandler);
 
-
-//Ruta crear un plato
-MenuRouter.post("/", createMenuHandler)
-
-
-
-module.exports = MenuRouter
+module.exports = MenuRouter;

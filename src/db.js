@@ -34,10 +34,10 @@ let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].s
 sequelize.models = Object.fromEntries(capsEntries);
 
 
-const {Category,Menu } = sequelize.models;
+const {Categories,Platos } = sequelize.models;
 
-Category.hasMany(Menu);
-Menu.belongsTo(Category);
+Categories.hasMany(Platos);
+Platos.belongsTo(Categories);
 
 
 
